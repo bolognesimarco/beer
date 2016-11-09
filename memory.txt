@@ -1,0 +1,10 @@
+An app starts with index.html which loads (in our case with Systemjs config) a script (main.ts)
+
+The script bootstraps a module (app.module.ts)
+
+The bootstrapped module is a BrowserModule and configures things (like routing). At last it 
+declares all application components and bootstraps some components.
+
+The components put templateUrl in page selectors.
+
+html pages can have routerLink for directing configured component's templateUrl in same html's router-outlet
