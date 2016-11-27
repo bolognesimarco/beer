@@ -9,16 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppTest2Component = (function () {
-    function AppTest2Component() {
+var router_1 = require("@angular/router");
+var AppHomeGuestComponent = (function () {
+    function AppHomeGuestComponent(router) {
+        this.router = router;
     }
-    AppTest2Component = __decorate([
+    AppHomeGuestComponent = __decorate([
         core_1.Component({
-            templateUrl: '/app/views/test2.html'
+            templateUrl: '/app/views/homeGuest.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppTest2Component);
-    return AppTest2Component;
+        __metadata('design:paramtypes', [router_1.Router])
+    ], AppHomeGuestComponent);
+    return AppHomeGuestComponent;
 }());
-exports.AppTest2Component = AppTest2Component;
-//# sourceMappingURL=app.test2.component.js.map
+exports.AppHomeGuestComponent = AppHomeGuestComponent;
+//# sourceMappingURL=app.home.guest.component.js.map

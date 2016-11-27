@@ -9,17 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppHeaderComponent = (function () {
-    function AppHeaderComponent() {
+var router_1 = require("@angular/router");
+var StateService_1 = require("../services/StateService");
+var AppSigninComponent = (function () {
+    function AppSigninComponent(router, statesService) {
+        this.router = router;
+        this.statesService = statesService;
     }
-    AppHeaderComponent = __decorate([
+    AppSigninComponent.prototype.cancel = function () {
+        this.statesService.states.signingIn = false;
+        this.router.navigate(["/home"]);
+    };
+    AppSigninComponent = __decorate([
         core_1.Component({
-            selector: 'bd-header',
-            templateUrl: '/app/views/header.html'
+            templateUrl: '/app/views/signin.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppHeaderComponent);
-    return AppHeaderComponent;
+        __metadata('design:paramtypes', [router_1.Router, StateService_1.StateService])
+    ], AppSigninComponent);
+    return AppSigninComponent;
 }());
-exports.AppHeaderComponent = AppHeaderComponent;
-//# sourceMappingURL=header.component.js.map
+exports.AppSigninComponent = AppSigninComponent;
+//# sourceMappingURL=app.signin.component.js.map

@@ -9,17 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppFooterComponent = (function () {
-    function AppFooterComponent() {
+var StateService = (function () {
+    function StateService() {
+        this.states = {
+            signingIn: false,
+            loggeidIn: false
+        };
     }
-    AppFooterComponent = __decorate([
-        core_1.Component({
-            selector: 'bd-footer',
-            templateUrl: '/app/views/footer.html'
-        }), 
+    StateService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppFooterComponent);
-    return AppFooterComponent;
+    ], StateService);
+    return StateService;
 }());
-exports.AppFooterComponent = AppFooterComponent;
-//# sourceMappingURL=footer.component.js.map
+exports.StateService = StateService;
+//# sourceMappingURL=StateService.js.map

@@ -1,0 +1,20 @@
+<div class="container" style="padding-top:15px;">
+    <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+            <div class="row vertical-align">
+                <div class="col-md-4">
+                    <span *ngIf="isLoggedin()" class="text-right" style="width: 100%">Brewer: {{user.name}}</span>
+                </div>
+                <div class="col-md-4">
+                    <img  *ngIf="isLoggedin()" src="{{user.avatar}}" class="img-responsive avatar" alt="Missing avatar!!" (click)="userDetail()">
+                </div>
+                <div class="col-md-4">
+                    <button *ngIf="showSignin()" type="button" class="btn btn-default" (click)="signin()">Sign in</button>
+                    <button *ngIf="isLoggedin()" type="button" class="btn btn-default" (click)="signout()">Sign out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

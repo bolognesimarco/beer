@@ -9,16 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppTestFComponent = (function () {
-    function AppTestFComponent() {
+var BrewerService = (function () {
+    function BrewerService() {
     }
-    AppTestFComponent = __decorate([
-        core_1.Component({
-            templateUrl: '/app/views/testF.html'
-        }), 
+    BrewerService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppTestFComponent);
-    return AppTestFComponent;
+    ], BrewerService);
+    return BrewerService;
 }());
-exports.AppTestFComponent = AppTestFComponent;
-//# sourceMappingURL=app.testF.component.js.map
+exports.BrewerService = BrewerService;
+//# sourceMappingURL=BrewerService.js.map
